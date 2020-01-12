@@ -247,15 +247,6 @@ resources:
                 - HEAD
               MaxAge: 3000
 
-    SendUploadNotificationsPermission:
-      Type: AWS::Lambda::Permission
-      Properties:
-        FunctionName: !Ref SendUploadNotificationsLambdaFunction
-        Principal: s3.amazonaws.com
-        Action: lambda:InvokeFunction
-        SourceAccount: !Ref AWS::AccountId
-        SourceArn: arn:aws:s3:::${self:provider.environment.IMAGES_S3_BUCKET}
-    
     BucketPolicy:
       Type: AWS::S3::BucketPolicy
       Properties:
