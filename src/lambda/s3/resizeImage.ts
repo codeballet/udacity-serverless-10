@@ -35,7 +35,7 @@ async function processImage(record: S3EventRecord) {
 
     const body = response.Body
     // Read the image with the Jimp library
-    const image: Buffer = await Jimp.read(body)
+    const image = await Jimp.read(body)
 
     // Resize image mainiting the width-height ratio
     console.log('Resizing image')
