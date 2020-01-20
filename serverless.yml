@@ -27,6 +27,10 @@ custom:
         schema: ${file(models/create-image-request.json)}
 
 provider:
+  tracing:
+    lambda: true
+    apiGateway: true
+
   name: aws
   runtime: nodejs12.x
 
