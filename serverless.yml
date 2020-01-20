@@ -7,8 +7,8 @@ plugins:
   - serverless-reqvalidator-plugin
   - serverless-plugin-canary-deployments
 
-package:
-  individually: true
+# package:
+#   individually: true
 
 custom:
   topicName: imagesTopic-${self:provider.stage}
