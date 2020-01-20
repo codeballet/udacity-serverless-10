@@ -4,7 +4,7 @@ import 'source-map-support/register'
 import { verify } from 'jsonwebtoken'
 import { JwtToken } from '../../auth/JwtToken'
 
-const cert = `...`
+const cert = ``
 
 export const handler = async (event: CustomAuthorizerEvent): Promise<CustomAuthorizerResult> => {
   try {
