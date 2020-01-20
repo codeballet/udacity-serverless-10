@@ -13,7 +13,9 @@ app.get('/groups', async (_req, res) => {
 
   const groups = await getAllGroups()
 
-  res.json({
+  res.set({
+    'Access-Control-Allow-Origin': '*'
+  }).json({
     items: groups
   })
 
